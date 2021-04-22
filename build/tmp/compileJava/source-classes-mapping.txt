@@ -65,8 +65,8 @@ it/ewlab/actor/ActorOuterClass.java
  it.ewlab.actor.ActorOuterClass$ActorOrBuilder
 grpchelloserver/GreetingServiceImpl.java
  grpchelloserver.GreetingServiceImpl
+actor/Server.java
+ actor.Server
 grpchelloserver/GreetingServiceClient.java
  grpchelloserver.GreetingServiceClient
  grpchelloserver.GreetingServiceClient$1
-actor/Server.java
- actor.Server

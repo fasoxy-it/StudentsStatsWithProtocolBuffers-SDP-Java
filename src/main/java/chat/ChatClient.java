@@ -33,7 +33,7 @@ public class ChatClient {
 
         //opening a connection with chat server
 
-        final ManagedChannel channel = ManagedChannelBuilder.forTarget(IP+":"+PORT).usePlaintext(true).build();
+        final ManagedChannel channel = ManagedChannelBuilder.forTarget(IP+":"+PORT).usePlaintext().build();
 
         System.out.println("[CHAT CLIENT] Connected!");
 

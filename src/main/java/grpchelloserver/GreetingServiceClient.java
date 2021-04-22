@@ -34,7 +34,7 @@ public class GreetingServiceClient {
     public static void synchronousCall(){
 
         //plaintext channel on the address (ip/port) which offers the GreetingService service
-        final ManagedChannel channel = ManagedChannelBuilder.forTarget("localhost:8080").usePlaintext(true).build();
+        final ManagedChannel channel = ManagedChannelBuilder.forTarget("localhost:8080").usePlaintext().build();
 
         //creating a blocking stub on the channel
         GreetingServiceBlockingStub stub = GreetingServiceGrpc.newBlockingStub(channel);
@@ -57,7 +57,7 @@ public class GreetingServiceClient {
     public static void asynchronousStreamCall() throws InterruptedException {
 
         //plaintext channel on the address (ip/port) which offers the GreetingService service
-        final ManagedChannel channel = ManagedChannelBuilder.forTarget("localhost:8080").usePlaintext(true).build();
+        final ManagedChannel channel = ManagedChannelBuilder.forTarget("localhost:8080").usePlaintext().build();
 
         //creating an asynchronous stub on the channel
         GreetingServiceStub stub = GreetingServiceGrpc.newStub(channel);
