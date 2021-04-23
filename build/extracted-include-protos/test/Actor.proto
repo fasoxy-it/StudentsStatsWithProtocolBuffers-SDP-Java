@@ -10,9 +10,9 @@ message Actor {
 	}
 
 	message Movie {
-		required string title = 1;
-		required int32 year = 2;
-	}
+        required string title = 1;
+        required int32 year = 2;
+    }
 
 	repeated Movie movie = 3;
 	optional Sex sex = 4;

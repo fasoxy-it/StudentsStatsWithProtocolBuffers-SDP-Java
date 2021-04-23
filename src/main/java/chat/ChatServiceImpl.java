@@ -57,7 +57,7 @@ public class ChatServiceImpl extends ChatServiceImplBase {
                             //peer no longer available
                             synchronized (observers){
 
-                                observers.remove(responseObserver);
+                                observers.remove(observer);
 
                             }
                         }
