@@ -1,6 +1,6 @@
 package researcher;
 
-import it.ewlab.researcher.ResearcherOuterClass.Researcher;
+import it.ewlab.researcher.StudentOuterClass;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -10,14 +10,13 @@ public class Server {
 
     public static void main(String[] args) throws IOException {
 
+        ServerSocket serverSocket = new ServerSocket(6789);
 
-        ServerSocket serverSocket = new ServerSocket(9999);
+        Socket socket = serverSocket.accept();
 
-        Socket s = serverSocket.accept();
+        StudentOuterClass.Student student = StudentOuterClass.Student.parseFrom(socket.getInputStream());
 
-        Researcher r = Researcher.parseFrom(s.getInputStream());
-
-        System.out.println(r);
+        System.out.println(student);
     }
 
 
